@@ -12,7 +12,7 @@ const Main = () => {
       <NavigationBar />
 
       <Outlet />
-      <div className="container mx-auto lg:px-20 px-4 my-10">
+      <div className="container mx-auto lg:px-10 px-4 my-10">
         <Banner />
         <Chefs />
       </div>
