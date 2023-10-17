@@ -1,9 +1,10 @@
-# React + Vite
+# RecipeRealm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [RecipeRealm](https://recipe-realm-client.web.app/)
 
-Currently, two official plugins are available:
+### Technologies / Tools used for this projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# recipe-realm-client-side
+- [React Router](https://reactrouter.com/en/main/start/tutorial#url-params-in-loaders)
+- [Tailwind CSS](https://tailwindcss.com/docs/installation), is used as a CSS Framework for the style
+- [Daisy UI](https://daisyui.com/docs/install/)
+- [React icon](https://react-icons.github.io/react-icons/)
