@@ -20,7 +20,7 @@ const Chefs = () => {
   }, []);
   return (
     <div className="py-10">
-      <div className="grid lg:grid-cols-3 gap-5 justify-center">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 justify-center">
         {chefs.map((chef) => (
           <ChefsCard key={chef.id} chef={chef}></ChefsCard>
         ))}
