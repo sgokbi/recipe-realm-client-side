@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const NavigationBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        alert("Something went wrong! couldn't log out!");
+      });
+  };
+
   return (
     <div className="bg-base-100">
-      <div className="container mx-auto lg:px-20 py-4 navbar ">
+      <div className="container mx-auto lg:px-20 py-4 navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -51,8 +62,10 @@ const NavigationBar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li to="/">
-              <a className="hover:!text-orange-600">Home</a>
+            <li>
+              <Link to="/" className="hover:!text-orange-600">
+                Home
+              </Link>
             </li>
             <li>
               <Link>Recipes</Link>
@@ -66,12 +79,32 @@ const NavigationBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar me-2">
-            <div className="w-10 rounded-full">
-              <img src="login-pic.jpg" />
-            </div>
-          </label>
-          <a className="btn">LogIn</a>
+          {/* NOTE FIXME show name when hover the image   */}
+          <p>{user?.displayName}</p>
+
+          {user && (
+            <label
+              tabIndex={0}
+              className="btn btn-ghost btn-circle avatar me-2"
+            >
+              <div className="w-10 rounded-full">
+                <img src="login-pic.jpg" />
+              </div>
+            </label>
+          )}
+          {/* <Link to="/login" className="btn">
+            LogIn
+          </Link> */}
+
+          {user ? (
+            <Link onClick={handleLogOut} to="/login" className="btn">
+              LogOut
+            </Link>
+          ) : (
+            <Link to="/login" className="btn">
+              LogIn
+            </Link>
+          )}
         </div>
       </div>
     </div>
