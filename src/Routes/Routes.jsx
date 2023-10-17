@@ -28,7 +28,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chefs/${params.id}`),
+          fetch(
+            `https://recipe-realm-server-hjmld5v6v-sagorikas-projects.vercel.app/chefs/${params.id}`
+          ),
       },
     ],
   },
