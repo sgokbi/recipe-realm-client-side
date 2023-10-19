@@ -11,8 +11,8 @@ const Main = () => {
     <div className="">
       <NavigationBar />
 
-      <Outlet />
-      <div className="container mx-auto lg:px-20 px-4 my-10">
+      {/* <Outlet /> */}
+      <div className="container mx-auto lg:px-10 px-4 my-10">
         <Banner />
         <Chefs />
       </div>
