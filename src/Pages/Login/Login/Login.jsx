@@ -42,6 +42,7 @@ const Login = () => {
         const loggedUser = res.user;
         console.log(loggedUser);
         setSuccess("Successfully SignUp");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.error(error.message);
@@ -55,6 +56,7 @@ const Login = () => {
         const loggedUser = res.user;
         console.log(loggedUser);
         setSuccess("Successfully SignUp");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.error(error.message);
